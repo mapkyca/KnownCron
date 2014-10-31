@@ -1,0 +1,38 @@
+# Crontab
+#
+# This file is an example of how to trigger cron events using the Known cron
+# plugin.
+#
+# @author Marcus Povey <marcus@marcus-povey.co.uk>
+
+
+## Stuff you need to configure ##
+
+# Location of your site (with trailing slash)
+SITE='https://www.example.com/'
+
+# Your admin access code (the one you got from activating your plugin
+CODE='........'
+
+
+
+## Stuff you probably won't need to touch ##
+
+# Location of lwp-request
+LWPR='/usr/bin/lwp-request'
+
+# Make GET request and discard content
+GET="$LWPR -m GET -d"
+
+
+
+## The crontab ##
+
+# You probably won't need to touch this
+
+* * * * * $GET ${SITE}cron/minute/
+@hourly $GET ${SITE}cron/hourly/
+@daily $GET ${SITE}cron/daily/
+@weekly $GET ${SITE}cron/weekly/
+@monthly $GET ${SITE}cron/monthly/
+@yearly $GET ${SITE}cron/yearly/
