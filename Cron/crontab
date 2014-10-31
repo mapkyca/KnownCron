@@ -30,9 +30,9 @@ GET="$LWPR -m GET -d"
 
 # You probably won't need to touch this
 
-* * * * * $GET ${SITE}cron/minute/
-@hourly $GET ${SITE}cron/hourly/
-@daily $GET ${SITE}cron/daily/
-@weekly $GET ${SITE}cron/weekly/
-@monthly $GET ${SITE}cron/monthly/
-@yearly $GET ${SITE}cron/yearly/
+* * * * * $GET ${SITE}cron/minute/?code=$CODE
+@hourly $GET ${SITE}cron/hourly/?code=$CODE
+@daily $GET ${SITE}cron/daily/?code=$CODE
+@weekly $GET ${SITE}cron/weekly/?code=$CODE
+@monthly $GET ${SITE}cron/monthly/?code=$CODE
+@yearly $GET ${SITE}cron/yearly/?code=$CODE
