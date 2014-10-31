@@ -5,7 +5,8 @@ namespace IdnoPlugins\Cron {
     class Main extends \Idno\Common\Plugin {
 
 	function registerPages() {
-	    \Idno\Core\site()->addPageHandler('/cron/([A-Za-z]+)/?', '\IdnoPlugins\Cron\Pages\Endpoint');
+	    \Idno\Core\site()->addPageHandler('cron/([A-Za-z]+)?/?', '\IdnoPlugins\Cron\Pages\Endpoint');
+	    \Idno\Core\site()->addPageHandler('cron', '\IdnoPlugins\Cron\Pages\Endpoint');
 
 	    \Idno\Core\site()->addPageHandler('admin/cron', '\IdnoPlugins\Cron\Pages\Admin');
 	    
