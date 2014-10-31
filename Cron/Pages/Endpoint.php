@@ -16,7 +16,7 @@ namespace IdnoPlugins\Cron\Pages {
 		// Check admin code
 		$cron = \Idno\Core\site()->plugins()->get('Cron');
 		if (!$cron->validateCode($this->getInput('code')))
-		    throw new \Exception('Sorry, admin code doesn\'t match');
+		    throw new \Exception('Sorry, admin code is missing or doesn\'t match, please pass your code as a GET variable ?code= to the call url.');
 
 		// Now, trigger an event
 		switch ($this->arguments[0]) {
