@@ -2,7 +2,7 @@
 
 namespace IdnoPlugins\Cron\Pages {
 
-    class Callback extends \Idno\Common\Page {
+    class Endpoint extends \Idno\Common\Page {
 
 	function getContent() {
 	    header('Content-Type: text/plain');
