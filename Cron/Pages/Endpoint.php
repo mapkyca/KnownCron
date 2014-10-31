@@ -26,6 +26,7 @@ namespace IdnoPlugins\Cron\Pages {
 		    case 'weekly' :
 		    case 'monthly':
 		    case 'yearly' : \Idno\Core\site()->triggerEvent("cron/{$this->arguments[0]}");
+			echo "Cron '{$this->arguments[0]}' event triggered. \n";
 			break;
 		    default:
 			throw new \Exception("'{$this->arguments[0]}' is an unrecognised event.");
