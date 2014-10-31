@@ -8,6 +8,9 @@ namespace IdnoPlugins\Cron {
 	    \Idno\Core\site()->addPageHandler('/cron/([A-Za-z]+)/?', '\IdnoPlugins\Cron\Pages\Endpoint');
 
 	    \Idno\Core\site()->addPageHandler('admin/cron', '\IdnoPlugins\Cron\Pages\Admin');
+	    
+	    // Add menu items to account & administration screens
+	    \Idno\Core\site()->template()->extendTemplate('admin/menu/items','admin/cron/menu');
 	}
 
 	function generateCode() {
