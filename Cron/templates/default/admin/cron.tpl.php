@@ -4,14 +4,14 @@
 ?>
 <div class="row">
 
-    <div class="span10 offset1">
+    <div class="col-md-10 col-md-offset-1">
         <h1>Cron</h1>
         <?=$this->draw('admin/menu')?>
     </div>
 
 </div>
 <div class="row">
-    <div class="span10 offset1">
+    <div class="col-md-10 col-md-offset-1">
         <form action="/admin/cron/" class="form-horizontal" method="post">
 	    <?php if ($code = $cron->getCode()) { ?>
 	    
