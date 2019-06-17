@@ -24,14 +24,14 @@
 		if (!$cron->getCode()) {
 		    // Create new code
 		    
-		    \Idno\Core\site()->config->config['cron'] = [
+		    \Idno\Core\site()->config()->config['cron'] = [
 			'code' => $cron->generateCode()
 		    ];
 		}
 		else
 		{
 		    // Unset cron
-		    \Idno\Core\site()->config->config['cron'] = [
+		    \Idno\Core\site()->config()->config['cron'] = [
 			'code' => false
 		    ];
 		}
