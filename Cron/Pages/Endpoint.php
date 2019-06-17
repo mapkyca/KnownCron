@@ -34,7 +34,7 @@ namespace IdnoPlugins\Cron\Pages {
 		
 	    } catch (\Exception $e) {
 		echo $e->getMessage();
-		\Idno\Core\site()->logging->log($e->getMessage(), LOGLEVEL_ERROR);
+		\Idno\Core\site()->logging()->log($e->getMessage(), LOGLEVEL_ERROR);
 	    }
 	}
 
