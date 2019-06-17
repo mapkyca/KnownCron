@@ -19,10 +19,10 @@ namespace IdnoPlugins\Cron {
 	}
 
 	function getCode() {
-	    if (!isset(\Idno\Core\site()->config->config['cron']))
+	    if (!isset(\Idno\Core\site()->config()->config['cron']))
 		return false;
 
-	    return \Idno\Core\site()->config->config['cron']['code'];
+	    return \Idno\Core\site()->config()->config['cron']['code'];
 	}
 
 	function validateCode($code) {
